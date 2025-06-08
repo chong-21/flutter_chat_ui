@@ -296,6 +296,7 @@ class _ChatAnimatedListState extends State<ChatAnimatedList>
     _scrollAnimationController.removeListener(_linkAnimationToScroll);
     _scrollAnimationController.dispose();
     _operationsSubscription.cancel();
+    _observerController.dispose();
 
     // Only try to dispose scroll controller if it's not provided, let
     // user handle disposing it how they want.
